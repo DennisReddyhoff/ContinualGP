@@ -12,7 +12,7 @@ import numpy as np
 import climin
 from functools import partial
 import matplotlib.pyplot as plt
-from matplotlib2tikz import save as tikz_save
+#from matplotlib2tikz import save as tikz_save
 
 
 def  get_batch_scales(X_all, X):
@@ -590,8 +590,8 @@ def plot_streaming_figures_experiment1_latex(model_list, Xtrain_list, Xtest_list
 
 # SINGLE OUTPUT (SO)
 def plot_streaming_latex(model_list, sXtrain, sXtest, sYtrain, sYtest, Z_points, q_mean_list, save=False):
-    plt.rc('text', usetex=True)
-    plt.rc('font', family='serif')
+  #  plt.rc('text', usetex=True)
+  #  plt.rc('font', family='serif')
 
     lik_noise = 1.5
     max_X = 2.0
@@ -633,10 +633,11 @@ def plot_streaming_latex(model_list, sXtrain, sXtest, sYtrain, sYtest, Z_points,
         plt.ylabel(r'Real Outputs')
         plt.xlabel(r'Real Inputs')
 
-        if save:
-            tikz_save('so_gpr_streaming_t'+str(t+1)+'.tex')
+        #if save:
+         #   tikz_save('so_gpr_streaming_t'+str(t+1)+'.tex')
 
         plt.show()
+
 
 # MULTI-OUTPUT (MO)
 def plot_multioutput_latex(model_list, sXtrain, sXtest, sYtrain, sYtest, Z_points, q_mean_list, save=False):

@@ -86,7 +86,7 @@ class ContinualGPInf(LatentFunctionInference):
 
             # KL Divergence
             KLnew, KLold, KLvar = self.calculate_KL(q_U=q_U, p_U_new=p_U_new, p_U_old=p_U_old, p_U_var=p_U_var, M=M, Mold=Mold, Q=Q)
-
+            print(KLnew,KLold,KLvar)
             # Log Marginal log(p(Y))
             F = 0
             for t in range(T):
